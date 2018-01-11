@@ -1,0 +1,66 @@
+//
+// DirWalk.rc
+//
+
+#include "Resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+
+// Generated from the TEXTINCLUDE 2 resource.
+#include "afxres.h"
+
+#undef APSTUDIO_READONLY_SYMBOLS
+
+// U.S. English resources
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif // _WIN32
+
+// Icon
+// Icon with the lowest ID value placed first to ensure
+// application icon remains consistent on all systems.
+IDI_DIRWALK ICON DISCARDABLE "DirWalk.Ico"
+
+// Dialog
+IDD_DIRWALK DIALOG DISCARDABLE 10, 18, 250, 250
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP |
+		WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Directory Walk"
+FONT 8, "System"
+BEGIN
+	LISTBOX		IDC_TREE,0,0,0,0,NOT LBS_NOTIFY |
+   				LBX_NOINTEGRALHEIGHT | NOT WS_BORDER |
+            	WS_VSCROLL | WS_HSCROLL | WS_GROUP |
+            	WS_TABSTOP
+END
+
+#ifdef APSTUDIO_INVOKED
+
+// Textinclude
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"Resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"#include ""afxres.h""\r\n"
+   "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"\r\n"
+   "\0"
+END
+
+#endif 	// APSTUDIO_INVOKED
+
+#endif	// U.S. English Resources
+
+#ifndef APSTUDIO_INVOKED
+
+#endif 	// not APSTUDIO_INVOKED
+

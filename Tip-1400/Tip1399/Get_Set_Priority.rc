@@ -1,0 +1,27 @@
+#include "windows.h"
+#include "generic.h"
+
+// Define these menu options in a popup menu.
+#define IDM_WORST    401
+#define IDM_LOW      402
+#define IDM_NORMAL   403
+#define IDM_HIGH     404
+#define IDM_BEST     405
+
+MYAPP                   ICON    DISCARDABLE     "GENERIC.ICO"
+
+MYAPP MENU DISCARDABLE
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Test"
+    BEGIN
+        MENUITEM "&Worst",                      IDM_WORST
+        MENUITEM "&Low",                        IDM_LOW
+        MENUITEM "&Normal",                     IDM_NORMAL
+        MENUITEM "&High",                       IDM_HIGH
+        MENUITEM "&Best",                       IDM_BEST
+    END
+END

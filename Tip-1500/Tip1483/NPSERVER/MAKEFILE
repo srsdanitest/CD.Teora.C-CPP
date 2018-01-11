@@ -1,0 +1,20 @@
+# Nmake macros for building Windows 32-Bit apps
+
+!include <ntwin32.mak>
+
+all: server.exe
+
+# Update the resource if necessary
+
+server.res: server.rc server.h
+    rc -r -fo server.res server.rc
+
+# Update the object file if necessary
+
+server.obj: server.c server.h
+    $(cc) $(cdebug) $(cflags) $(cvars) server.c
+
+# Update the executable file if necessary, and if so, add the resource back in.
+
+server.exe: server.obj server.res
+    $(link) $(linkdebug) $(guiflags) -out:server.exe server.obj server.res $(guilibs) advapi.lib
